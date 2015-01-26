@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+Source	= ${1:Name}.z80
+Target	= ${1}
+Name	= ${1}
+Calc	= ti83p
+Type	= nostub
+Options	= -T
+Debug	= false
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>!conf</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.z80asm-ti</scope>
+    <description>z80Asm-ti: ti83+ program skeleton</description>
+</snippet>

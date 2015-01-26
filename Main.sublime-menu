@@ -1,0 +1,54 @@
+[
+
+{
+  "caption": "z80Asm",
+  "mnemonic": "Z",
+  "id": "z80asm-ti",
+  "children": [
+    { "command": "",                                                  "caption": "New",           "mnemonic": "N",
+      "children": [
+        { "command": "z80_do_cmd", "args": {"cmd":"NewFunkProgram"},  "caption": "Funk Program",  "mnemonic": "F" },
+        { "command": "z80_do_cmd", "args": {"cmd":"NewFunkApp"},      "caption": "Funk App",      "mnemonic": "A" },
+        { "command": "z80_do_cmd", "args": {"cmd":"NewFunkConfig"},   "caption": "Funk Config",   "mnemonic": "C" },
+        { "command": "z80_do_cmd", "args": {"cmd":"NewTI83pProgram"}, "caption": "TI83p Program", "mnemonic": "P" }
+      ]
+    },
+    { "caption": "-"},
+    { "command": "z80_do_cmd",     "args": {"cmd":"BuildFunk"},          "caption": "Build Funk",      "mnemonic": "B" },
+    { "command": "z80_do_cmd",     "args": {"cmd":"BuildFunkApp"},       "caption": "Build Funk App",  "mnemonic": "A" },
+    { "command": "",                                                     "caption": "Build Spasm",     "mnemonic": "S",
+      "children": [
+        { "command": "z80_do_cmd", "args": {"cmd":"BuildSpasmTI83p"},    "caption": "TI83+ Program",   "mnemonic": "P" },
+        { "command": "z80_do_cmd", "args": {"cmd":"BuildSpasmTI83pApp"}, "caption": "TI83+ APP",       "mnemonic": "A" }
+      ]
+    },
+
+    { "caption": "-"},
+    { "command": "", "caption": "Help Files", "mnemonic": "H",
+      "children":
+      [
+        {"command": "z80_help", "args": {"indx":0}},
+        {"command": "z80_help", "args": {"indx":1}},
+        {"command": "z80_help", "args": {"indx":2}},
+        {"command": "z80_help", "args": {"indx":3}},
+        {"command": "z80_help", "args": {"indx":4}},
+        {"command": "z80_help", "args": {"indx":5}},
+        {"command": "z80_help", "args": {"indx":6}},
+        {"command": "z80_help", "args": {"indx":7}},
+        {"command": "z80_help", "args": {"indx":8}},
+        {"command": "z80_help", "args": {"indx":9}},
+        {"command": "z80_help", "args": {"indx":10}},
+        {"command": "z80_help", "args": {"indx":11}},
+        {"command": "z80_help", "args": {"indx":12}},
+        {"command": "z80_help", "args": {"indx":13}},
+        {"command": "z80_help", "args": {"indx":14}}
+      ]
+    },
+
+    { "caption": "-"},
+    { "command": "open_dir", "args": {"dir": "${packages}/z80asm-ti/"}, "caption": "Open package folder",  "mnemonic": "P" }
+    
+  ]
+}
+
+]

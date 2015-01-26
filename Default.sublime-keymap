@@ -1,0 +1,10 @@
+[
+	{
+		"keys": ["f1"], "command": "z80_quick_help",
+		"context": [ { "operand": "source.z80asm-ti", "operator": "equal", "key": "selector" } ]
+	},
+	{
+		"keys": ["ctrl+e"], "command": "z80_emulate",
+		"context": [ { "operand": "source.z80asm-ti", "operator": "equal", "key": "selector" } ]
+	}
+]

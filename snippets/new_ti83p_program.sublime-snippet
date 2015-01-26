@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[
+;
+; Hello TI83P example program
+;
+
+	.org	progstart - 2
+	.db	t2ByteTok, tAsmCmp
+
+start:
+	b_call(_ClrLCDFull)
+	ld	de, 0
+	ld	(PenCol), de
+	ld	hl, msg
+	b_call(_PutS) ; Display the text
+	b_call(_NewLine)
+	ret${1:}
+
+msg:
+	.db "Hello TI83P!", 0
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>!ti83p</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.z80asm-ti</scope>
+    <description>z80Asm-ti: ti83+ program skeleton</description>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+      ld ${1:b}${2:c}, ${3:1}
+_
+      ${0:}
+      dec   ${1:b}${2:c}
+      ld    a, ${1:b}
+      or    ${2:c}
+      jr    nz, -_
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>loopbc</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.z80asm-ti</scope>
+    <description># Loop with BC</description>
+</snippet>

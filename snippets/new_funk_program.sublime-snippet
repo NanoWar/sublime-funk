@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+;
+; Hello Funk example program
+;
+
+	bcall	_ClrLCDFull
+	text	24, 30, "Hello Funk,"
+	text	30, 33, "you rock!"
+	quit${0:}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>!prog</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.z80asm-ti</scope>
+    <description>z80Asm-ti: funk program skeleton</description>
+</snippet>
