@@ -1,7 +1,9 @@
-# Z80 ASM TI package for Sublime Text 2/3 with [FunkLibrary](https://github.com/NanoWar/FunkLibrary) and SPASM
+# Z80 ASM TI package for Sublime Text 2/3
+Bundled with [FunkLibrary](https://github.com/NanoWar/FunkLibrary) and SPASM
+
 ---
 
-## Product info
+## Product information
 
 This plugin contains syntax definition for Z80 assembler language (targeting Texas Instruments calculators, mainly TI83+), code snippets, its own shiny color theme and build system.
 
