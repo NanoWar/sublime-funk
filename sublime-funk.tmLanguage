@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+	<string>funk</string>
+	</array>
+	<key>name</key>
+	<string>FunkAsm</string>
+	<key>patterns</key>
+	<array>
+
+		<dict>
+			<key>comment</key>
+			<string>Module</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.funk</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>mod.funk</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?i)\b(mod)\s+([a-z_][0-9a-z_]*)\b</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Function Decl</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.funk</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>function.funk</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?i)\b(fn)\s+([a-z_][0-9a-z_]*)\s*(?=\()</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Function Call</string>
+			<key>match</key>
+			<string>(?i)\b([a-z_][0-9a-z_\.]*\.)?([a-z_][0-9a-z_\.]*)\s*(?=\()</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>mod.funk</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>call.function.funk</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Parameter Decl</string>
+			<key>match</key>
+			<string>(?i)\b[a-z0-9_\.]+\s*(?=\:)</string>
+			<key>name</key>
+			<string>parameter.funk</string>
+		</dict>
+		
+		<dict>
+			<key>comment</key>
+			<string>Operators</string>
+			<key>match</key>
+			<string>[\*\$]</string>
+			<key>name</key>
+			<string>important.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Operators</string>
+			<key>match</key>
+			<string>[\+\-\=]</string>
+			<key>name</key>
+			<string>operator.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Brackets</string>
+			<key>match</key>
+			<string>[\{\}]</string>
+			<key>name</key>
+			<string>irrelevant.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Number (hex, bin, dec)</string>
+			<key>match</key>
+			<string>(?i)(%[01]+\b)|(\b[01]+b\b)|((#|\$)[0-9a-f]+\b)|(\b([0-9]+|0x[0-9a-f]+|[0-9][0-9a-f]*h)\b)</string>
+			<key>name</key>
+			<string>number.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Bit operator</string>
+			<key>match</key>
+			<string>([\&amp;\|]{1,2}|[\&lt;\&gt;]{2})</string>
+			<key>name</key>
+			<string>operator.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Funk commands</string>
+			<key>match</key>
+			<string>(?i)\b(inc|if|else)\b</string>
+			<key>name</key>
+			<string>keyword.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>8 bit register set</string>
+			<key>match</key>
+			<string>(?i)\b(a|b|c|d|e|h|l|i|r|xl|lx|xh|hx|ixl|ixh|yl|ly|yh|hy|iyl|iyh)\b</string>
+			<key>name</key>
+			<string>register.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>16 bit register set</string>
+			<key>match</key>
+			<string>(?i)(\baf')|(\b(af|bc|de|hl|sp|ix|iy)\b)</string>
+			<key>name</key>
+			<string>register.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>FunkLibrary constant</string>
+			<key>match</key>
+			<string>(?i)\b(true|false)\b</string>
+			<key>name</key>
+			<string>constant.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Directive</string>
+			<key>match</key>
+			<string>(?i)(?&lt;=\s|^)(\.[a-z0-9_]+\b)</string>
+			<key>name</key>
+			<string>directive.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Macro</string>
+			<key>match</key>
+			<string>(?i)(?&lt;=\s|^)(\#[a-z0-9_]+\b)</string>
+			<key>name</key>
+			<string>macro.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Label</string>
+			<key>match</key>
+			<string>^(([a-zA-Z_.@][a-zA-Z_.0-9]*)|[0-9]+)(?=\s|:|=|$)</string>
+			<key>name</key>
+			<string>label.definition.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Common addresses</string>
+			<key>match</key>
+			<string>(?i)\b(pencol|penrow|curcol|currow|gbuf)\b</string>
+			<key>name</key>
+			<string>address.common.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Getkey (sk, di) constants</string>
+			<key>match</key>
+			<string>(?i)\b((sk|di)[^;\s\.]+)\b</string>
+			<key>name</key>
+			<string>constant.funk</string>
+		</dict>
+
+		<dict>
+			<key>begin</key>
+			<string>//</string>
+			<key>end</key>
+			<string>$\n</string>
+			<key>name</key>
+			<string>comment.funk</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Single-line string</string>
+			<key>match</key>
+			<string>'(\\\'|[^'])*'</string>
+			<key>name</key>
+			<string>string.funk</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Single-line string</string>
+			<key>match</key>
+			<string>"(\\\"|[^"])*"</string>
+			<key>name</key>
+			<string>string.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Uppercase Constant</string>
+			<key>match</key>
+			<string>\b([A-Z_]+[A-Z0-9_]*\b)</string>
+			<key>name</key>
+			<string>constant.funk</string>
+		</dict>
+		<!--
+		<dict>
+			<key>comment</key>
+			<string>Ident</string>
+			<key>match</key>
+			<string>(?i)\b([a-z_]+[a-z0-9_]*\b)</string>
+			<key>name</key>
+			<string>ident.funk</string>
+		</dict>
+		-->
+	</array>
+	<key>scopeName</key>
+	<string>source.funk</string>
+	<key>uuid</key>
+	<string>6ffc00d7-caef-4912-be4a-4840e378437c</string>
+</dict>
+</plist>

@@ -4,52 +4,52 @@ import subprocess
 import signal
 
 # Consts
-THIS_PLUGIN_NAME = 'z80asm-ti'
+THIS_PLUGIN_NAME = 'sublime-funk'
 THIS_PLUGIN_DEBUG = True
 
 # Initialize plugin
-def Z80Init():
-	global Z80_DIR, Z80_SYNTAX_FILE, Z80_SNIP_DIR, Z80_HELP_DIR
-	Z80_DIR = os.path.join(sublime.packages_path(), THIS_PLUGIN_NAME)
-	Z80_SYNTAX_FILE = 'Packages/' + THIS_PLUGIN_NAME + '/' + THIS_PLUGIN_NAME + '.tmLanguage'
-	Z80_SNIP_DIR = 'Packages/' + THIS_PLUGIN_NAME + '/' + 'snippets'
-	Z80_HELP_DIR = Z80_DIR + '/' + 'helps'
+def FunkInit():
+	global Funk_DIR, Funk_SYNTAX_FILE, Funk_SNIP_DIR, Funk_HELP_DIR
+	Funk_DIR = os.path.join(sublime.packages_path(), THIS_PLUGIN_NAME)
+	Funk_SYNTAX_FILE = 'Packages/' + THIS_PLUGIN_NAME + '/' + THIS_PLUGIN_NAME + '.tmLanguage'
+	Funk_SNIP_DIR = 'Packages/' + THIS_PLUGIN_NAME + '/' + 'snippets'
+	Funk_HELP_DIR = Funk_DIR + '/' + 'helps'
 
 
 
 # Debug print
 def dbgprint(s):
 	if THIS_PLUGIN_DEBUG:
-		print ("# z80Asm-ti:",s)
+		print ("# FunkAsm:",s)
 		sublime.status_message(s)
 
 
 
 # Command handler class
-class Z80DoCmdCommand(sublime_plugin.WindowCommand):
+class FunkDoCmdCommand(sublime_plugin.WindowCommand):
 	# Command handler
 	def run(self, cmd):
 
 		# New example files
 		if cmd=="NewFunkProgram":
 			v=self.window.new_file()
-			v.set_syntax_file(Z80_SYNTAX_FILE)
-			v.run_command("insert_snippet", {"name": Z80_SNIP_DIR+'/new_funk_program.sublime-snippet'})
+			v.set_syntax_file(Funk_SYNTAX_FILE)
+			v.run_command("insert_snippet", {"name": Funk_SNIP_DIR+'/new_funk_program.sublime-snippet'})
 			dbgprint("New Funk program created")
 		elif cmd=="NewFunkApp":
 			v=self.window.new_file()
-			v.set_syntax_file(Z80_SYNTAX_FILE)
-			v.run_command("insert_snippet", {"name": Z80_SNIP_DIR+'/new_funk_app.sublime-snippet'})
+			v.set_syntax_file(Funk_SYNTAX_FILE)
+			v.run_command("insert_snippet", {"name": Funk_SNIP_DIR+'/new_funk_app.sublime-snippet'})
 			dbgprint("New Funk app created")
 		elif cmd=="NewFunkConfig":
 			v=self.window.new_file()
-			v.set_syntax_file(Z80_SYNTAX_FILE)
-			v.run_command("insert_snippet", {"name": Z80_SNIP_DIR+'/new_funk_config.sublime-snippet'})
+			v.set_syntax_file(Funk_SYNTAX_FILE)
+			v.run_command("insert_snippet", {"name": Funk_SNIP_DIR+'/new_funk_config.sublime-snippet'})
 			dbgprint("New Funk config created")
 		elif cmd=="NewTI83pProgram":
 			v=self.window.new_file()
-			v.set_syntax_file(Z80_SYNTAX_FILE)
-			v.run_command("insert_snippet", {"name": Z80_SNIP_DIR+'/new_ti83p_program.sublime-snippet'})
+			v.set_syntax_file(Funk_SYNTAX_FILE)
+			v.run_command("insert_snippet", {"name": Funk_SNIP_DIR+'/new_ti83p_program.sublime-snippet'})
 			dbgprint("New TI83P program created")
 
 		# Build scripts
@@ -68,21 +68,21 @@ class Z80DoCmdCommand(sublime_plugin.WindowCommand):
 
 	# Disable not implemented items
 	def is_enabled(self, cmd):
+		return True
 		if cmd not in ["BuildTasm"]:
 			return True
-		return False
 
 
 
 # Helps
-class Z80HelpCommand(sublime_plugin.WindowCommand):
+class FunkHelpCommand(sublime_plugin.WindowCommand):
 	def run(self, indx):
 		n=self.help_list()
-		self.window.run_command("open_file", {"file": "${packages}/z80asm-ti/helps/"+n[indx]})
+		self.window.run_command("open_file", {"file": "${packages}/"+THIS_PLUGIN_NAME+"/helps/"+n[indx]})
 
 	# Scan helps folder for files (10 max)
 	def help_list(self):
-		lst=os.listdir(Z80_HELP_DIR)
+		lst=os.listdir(Funk_HELP_DIR)
 		lst.sort()
 		return lst[:15]
 
@@ -103,14 +103,14 @@ class Z80HelpCommand(sublime_plugin.WindowCommand):
 
 
 # Quick help - F1
-class Z80QuickHelpCommand(sublime_plugin.WindowCommand):
+class FunkQuickHelpCommand(sublime_plugin.WindowCommand):
 	# Init: read items from file
 	def __init__(self, *args, **kwargs):
 		self.help=[]
-		with open(Z80_DIR+'/'+THIS_PLUGIN_NAME+'.quickhelp','rt') as f:
+		with open(Funk_DIR+'/'+THIS_PLUGIN_NAME+'.quickhelp','rt') as f:
 			self.help = [line.strip() for line in f]
 
-		super(Z80QuickHelpCommand,self).__init__(*args, **kwargs)
+		super(FunkQuickHelpCommand,self).__init__(*args, **kwargs)
 
 	# Show help
 	def run(self):
@@ -120,7 +120,7 @@ class Z80QuickHelpCommand(sublime_plugin.WindowCommand):
 wabbitemu_process = None
 
 # Command handler class
-class Z80EmulateCommand(sublime_plugin.WindowCommand):
+class FunkEmulateCommand(sublime_plugin.WindowCommand):
 	# Command handler
 	def run(self):
 		global wabbitemu_process
@@ -152,7 +152,7 @@ class Z80EmulateCommand(sublime_plugin.WindowCommand):
 			wabbitemu_process = process
 
 # Autocompletion class
-class Z80Autocomplete(sublime_plugin.EventListener):
+class FunkAutocomplete(sublime_plugin.EventListener):
 	# Generate completion list from all opened tabs
 	def on_query_completions(self, view, prefix, locations):
 		# Check if option is enabled
@@ -178,11 +178,11 @@ class Z80Autocomplete(sublime_plugin.EventListener):
 
 
 # Define plugin_loaded() function for ST3 because it's have another plugin lifecycle
-# (cannot call sublime.packages_path() at importing time). For ST2 fust call Z80Init().
+# (cannot call sublime.packages_path() at importing time). For ST2 fust call FunkInit().
 if int(sublime.version())>=3000:
 	def plugin_loaded():
-		Z80Init()
+		FunkInit()
 else:
-	Z80Init()
+	FunkInit()
 
-dbgprint("plugin started")
+dbgprint("FunkAsm plugin started")

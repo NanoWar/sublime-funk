@@ -1,4 +1,4 @@
-# Z80 ASM TI package for Sublime Text 2/3
+# FunkAam package for Sublime Text 2/3
 Bundled with [FunkLibrary](https://github.com/NanoWar/FunkLibrary) and SPASM
 
 ---
@@ -11,8 +11,8 @@ This plugin contains syntax definition for Z80 assembler language (targeting Tex
 
 ## Installation
 
-Simply copy the `sublime-text-z80asm-ti` directory to the Sublime Text `Packages` directory. Under Windows that would be in you User folder `...\AppData\Roaming\Sublime Text 3\Packages\`.
-Go to the `Tools > Build System` menu and select the `z80asm-ti` item. Now you can press Ctrl+B to build the opened file or the project if there is a FunkLibrary config file (see FunkLibrary's readme).
+Simply copy the `FunkAsm` directory to the Sublime Text `Packages` directory. Under Windows that would be in you User folder `...\AppData\Roaming\Sublime Text 3\Packages\`.
+Go to the `Tools > Build System` menu and select the `FunkAsm` item. Now you can press Ctrl+B to build the opened file or the project if there is a FunkLibrary config file (see FunkLibrary's readme).
 
 ---
 
@@ -20,17 +20,17 @@ Go to the `Tools > Build System` menu and select the `z80asm-ti` item. Now you c
 
 #### Color scheme
 
-This plugin contains its own color scheme `z80asm-ti.tmTheme` based on Monokai theme. There are some `*.z80` scope selectors with specific colors for assembler tokens.
+This plugin contains its own color scheme `FunkAsm.tmTheme` based on Monokai theme. There are some `*.z80` scope selectors with specific colors for assembler tokens.
 
 
 #### Build system
 
-This package uses SPASM as assembler and FunkLibrary. If you want to compile with z80asm-ti and the automatic build system using `Ctrl+B`, you use FunkLibrary by default. You can use the menu to assemble with only SPASM or change the build script `z80asm-ti.sublime-build` in this package yourself.
+This package uses SPASM as assembler and FunkLibrary. If you want to compile with FunkAsm and the automatic build system using `Ctrl+B`, you use FunkLibrary by default. You can use the menu to assemble with only SPASM or change the build script `FunkAsm.sublime-build` in this package yourself.
 
 
 #### Emulator support
 
-Currently this plugin searches for an executable 'Wabbitemu.exe' in the current project's folder and runs it when there is also a file that end with *.8xk or *.8xp. You can modify this in the 'z80asm-ti.py' script.
+Currently this plugin searches for an executable 'Wabbitemu.exe' in the current project's folder and runs it when there is also a file that end with *.8xk or *.8xp. You can modify this in the 'FunkAsm.py' script.
 
 
 #### Snippets
@@ -54,7 +54,7 @@ Also, you can call a quick help panel by pressing F1 where you can do a search t
 
 ## Support
 
-If you have a bug/feature request - please post it on the [issue tracker](https://github.com/NanoWar/sublime-text-z80asm-ti/issues).
+If you have a bug/feature request - please post it on the [issue tracker](https://github.com/NanoWar/sublime-text-FunkAsm/issues).
 
 ---
 

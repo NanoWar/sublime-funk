@@ -3,42 +3,42 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-		<string>Monokai-z80asmti</string>
+	<string>Monokai-FunkAsm</string>
 	<key>settings</key>
 	<array>
 		<dict>
 			<key>settings</key>
 			<dict>
 				<key>activeGuide</key>
-					<string>#9D550FB0</string>
+				<string>#9D550FB0</string>
 				<key>background</key>
-					<string>#272822</string>
+				<string>#272822</string>
 				<key>bracketContentsForeground</key>
-					<string>#F8F8F2A5</string>
+				<string>#F8F8F2A5</string>
 				<key>bracketContentsOptions</key>
-					<string>underline</string>
+				<string>underline</string>
 				<key>bracketsForeground</key>
-					<string>#F8F8F2A5</string>
+				<string>#F8F8F2A5</string>
 				<key>bracketsOptions</key>
-					<string>underline</string>
+				<string>underline</string>
 				<key>caret</key>
-					<string>#F8F8F0</string>
+				<string>#F8F8F0</string>
 				<key>findHighlight</key>
-					<string>#FFE792</string>
+				<string>#FFE792</string>
 				<key>findHighlightForeground</key>
-					<string>#000000</string>
+				<string>#000000</string>
 				<key>foreground</key>
-					<string>#F8F8F2</string>
+				<string>#F8F8F2</string>
 				<key>invisibles</key>
-					<string>#3B3A32</string>
+				<string>#3B3A32</string>
 				<key>lineHighlight</key>
-					<string>#3E3D32</string>
+				<string>#3E3D32</string>
 				<key>selection</key>
-					<string>#49483E</string>
+				<string>#49483E</string>
 				<key>selectionBorder</key>
-					<string>#222218</string>
+				<string>#222218</string>
 				<key>tagsOptions</key>
-					<string>stippled_underline</string>
+				<string>stippled_underline</string>
 			</dict>
 		</dict>
 		<dict>
@@ -128,7 +128,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#F92672</string>
+			<string>#F92672</string>
 			</dict>
 		</dict>
 		<dict>
@@ -180,20 +180,20 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#A6E22E</string>
+			<string>#A6E22E</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Function argument</string>
 			<key>scope</key>
-			<string>variable.parameter</string>
+			<string>variable.Parameter</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>#FD971F</string>
+			<string>#FD971F</string>
 			</dict>
 		</dict>
 		<dict>
@@ -376,268 +376,320 @@
 		<!-- ######################################################################################## -->
 		<dict>
 			<key>name</key>
-				<string>Invalid</string>
+			<string>Invalid</string>
 			<key>scope</key>
-				<string>invalid.z80</string>
+			<string>invalid.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-					<string>#FF0000</string>
+				<string>#FF0000</string>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#F8F8F0</string>
+				<string>#F8F8F0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Irrelevant</string>
+			<key>scope</key>
+			<string>irrelevant.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AAAAAA</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Directive</string>
+			<string>Directive</string>
 			<key>scope</key>
-				<string>directive.z80</string>
+			<string>directive.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#3AEA98</string>
+				<string>#3AEA98</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Macro</string>
+			<string>Macro</string>
 			<key>scope</key>
-				<string>macro.z80</string>
+			<string>macro.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#F92672</string>
+				<string>#F92672</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Parameter</string>
+			<string>Ident</string>
 			<key>scope</key>
-				<string>parameter.z80</string>
+			<string>ident.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string>italic</string>
+				<string></string>
 				<key>foreground</key>
-					<string>#FD971F</string>
+				<string>#3AEA98</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Function</string>
+			<string>Module</string>
 			<key>scope</key>
-				<string>function.z80</string>
+			<string>mod.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#A6E22E</string>
+				<string>#A6E22E</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>File name</string>
+			<string>Function</string>
 			<key>scope</key>
-				<string>file.name.z80</string>
+			<string>function.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string>italic</string>
+				<string></string>
 				<key>foreground</key>
-					<string>#E6DB74</string>
+				<string>#66D9EF</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Common addresses</string>
+			<string>Function</string>
 			<key>scope</key>
-				<string>address.common.z80</string>
+			<string>call.function.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string>italic</string>
+				<string></string>
 				<key>foreground</key>
-					<string>#66D9EF</string>
+				<string>#66D9EF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Parameter Decl</string>
+			<key>scope</key>
+			<string>parameter.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#3AEA98</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Operator</string>
+			<key>scope</key>
+			<string>operator.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F92672</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Important</string>
+			<key>scope</key>
+			<string>important.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#3AEA98</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Label</string>
+			<key>scope</key>
+			<string>label.txt.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#E6DB74</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>File name</string>
+			<key>scope</key>
+			<string>file.name.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#E6DB74</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Common addresses</string>
+			<key>scope</key>
+			<string>address.common.funk</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#66D9EF</string>
 			</dict>
 		</dict>
 		<!--<dict>
 			<key>Name</key>
-				<string>Label</string>
+			<string>Label</string>
 			<key>scope</key>
-				<string>label.reuse.z80</string>
+			<string>label.reuse.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#F92672</string>
+				<string>#F92672</string>
 			</dict>
 		</dict>-->
 		<dict>
 			<key>Name</key>
-				<string>Label</string>
+			<string>Label</string>
 			<key>scope</key>
-				<string>label.z80</string>
+			<string>label.gfx.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#66D9EF</string>
+				<string>#3AEA98</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Operator</string>
+			<string>Label definition</string>
 			<key>scope</key>
-				<string>operator.z80</string>
+			<string>label.definition.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#3AEA98</string>
+				<string>#66D9EF</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Label</string>
+			<string>Flags</string>
 			<key>scope</key>
-				<string>label.txt.z80</string>
+			<string>flag.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string>bold</string>
 				<key>foreground</key>
-					<string>#E6DB74</string>
+				<string>#A6E22E</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Label</string>
+			<string>Commands</string>
 			<key>scope</key>
-				<string>label.gfx.z80</string>
+			<string>keyword.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#3AEA98</string>
+				<string>#F92672</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Label definition</string>
+			<string>Register</string>
 			<key>scope</key>
-				<string>label.definition.z80</string>
+			<string>register.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string>italic</string>
 				<key>foreground</key>
-					<string>#66D9EF</string>
+				<string>#FD971F</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Flags</string>
+			<string>Number (hex, bin, dec)</string>
 			<key>scope</key>
-				<string>flag.z80</string>
+			<string>number.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string>bold</string>
+				<string></string>
 				<key>foreground</key>
-					<string>#A6E22E</string>
+				<string>#AE81FF</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Commands</string>
+			<string>DEFINE_CONSTANT</string>
 			<key>scope</key>
-				<string>command.z80</string>
+			<string>constant.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string>italic</string>
 				<key>foreground</key>
-					<string>#F92672</string>
+				<string>#AE81FF</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Register</string>
+			<string>Comment</string>
 			<key>scope</key>
-				<string>register.z80</string>
+			<string>comment.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string>italic</string>
 				<key>foreground</key>
-					<string>#FD971F</string>
+				<string>#75715E</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Name</key>
-				<string>Number (hex, bin, dec)</string>
+			<string>String</string>
 			<key>scope</key>
-				<string>number.z80</string>
+			<string>string.funk</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-					<string></string>
+				<string></string>
 				<key>foreground</key>
-					<string>#AE81FF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Name</key>
-				<string>DEFINE_CONSTANT</string>
-			<key>scope</key>
-				<string>constant.z80</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-					<string>italic</string>
-				<key>foreground</key>
-					<string>#AE81FF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Name</key>
-				<string>Comment</string>
-			<key>scope</key>
-				<string>comment.z80</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-					<string>italic</string>
-				<key>foreground</key>
-					<string>#75715E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Name</key>
-				<string>String</string>
-			<key>scope</key>
-				<string>string.z80</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-					<string></string>
-				<key>foreground</key>
-					<string>#E6DB74</string>
+				<string>#E6DB74</string>
 			</dict>
 		</dict>
 	</array>
 	<key>uuid</key>
-		<string>f705bd85-c431-4288-85b2-814630c029e9</string>
+	<string>043c33c8-908d-4651-b016-da5fb3344648</string>
 </dict>
 </plist>

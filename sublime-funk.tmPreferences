@@ -5,34 +5,28 @@
 	<key>name</key>
 	<string>Comments, indent</string>
 	<key>scope</key>
-	<string>source.z80asm-ti</string>
+	<string>source.funk</string>
 	<key>settings</key>
 	<dict>
 		<key>increaseIndentPattern</key>
-		<string>(?x)^[a-zA-Z_.@][a-zA-Z_.0-9]*(?=\s|:|=|$)</string>
+		<string>.*\{\s*$</string>
 		<key>shellVariables</key>
 		<array>
 			<dict>
 				<key>name</key>
 				<string>TM_COMMENT_START</string>
 				<key>value</key>
-				<string>; </string>
+				<string>// </string>
 			</dict>
 			<dict>
 				<key>name</key>
 				<string>TM_COMMENT_START_2</string>
 				<key>value</key>
-				<string>//</string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>TM_COMMENT_START_3</string>
-				<key>value</key>
 				<string>/*</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>TM_COMMENT_END_3</string>
+				<string>TM_COMMENT_END_2</string>
 				<key>value</key>
 				<string>*/</string>
 			</dict>
