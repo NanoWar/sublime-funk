@@ -73,6 +73,47 @@
 
 		<dict>
 			<key>comment</key>
+			<string>ASM block</string>
+			<key>begin</key>
+			<string>(?i)\b(asm)\s+(\{)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>irrelevant.funk</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>source.z80Asm-ti</string>
+			<key>end</key>
+			<string>\}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>irrelevant.funk</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.embedded.z80asm-ti</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.z80asm-ti</string>
+				</dict>
+			</array>
+		</dict>
+		
+		<dict>
+			<key>comment</key>
 			<string>Parameter Decl</string>
 			<key>match</key>
 			<string>(?i)\b[a-z0-9_\.]+\s*(?=\:)</string>
@@ -129,7 +170,7 @@
 			<key>comment</key>
 			<string>Funk commands</string>
 			<key>match</key>
-			<string>(?i)\b(inc|if|else)\b</string>
+			<string>(?i)\b(fn|mod|save|asm|inc|if|else)\b</string>
 			<key>name</key>
 			<string>keyword.funk</string>
 		</dict>
