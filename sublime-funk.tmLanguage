@@ -116,7 +116,7 @@
 			<key>comment</key>
 			<string>Parameter Decl</string>
 			<key>match</key>
-			<string>(?i)\b[a-z0-9_\.]+\s*(?=\:)</string>
+			<string>(?i)\b[a-z][a-z0-9_\.]*\s*(?=\:)</string>
 			<key>name</key>
 			<string>parameter.funk</string>
 		</dict>
@@ -134,7 +134,7 @@
 			<key>comment</key>
 			<string>Operators</string>
 			<key>match</key>
-			<string>[\+\-\=]</string>
+			<string>(-\>|[\+\-\=]{1,2})</string>
 			<key>name</key>
 			<string>operator.funk</string>
 		</dict>
@@ -143,7 +143,7 @@
 			<key>comment</key>
 			<string>Brackets</string>
 			<key>match</key>
-			<string>[\{\}]</string>
+			<string>[\{\},]</string>
 			<key>name</key>
 			<string>irrelevant.funk</string>
 		</dict>
@@ -168,9 +168,18 @@
 
 		<dict>
 			<key>comment</key>
+			<string>Fixed number type</string>
+			<key>match</key>
+			<string>(?i)\b(num)\b</string>
+			<key>name</key>
+			<string>number.funk</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
 			<string>Funk commands</string>
 			<key>match</key>
-			<string>(?i)\b(fn|mod|save|asm|inc|if|else)\b</string>
+			<string>(?i)\b(fn|mod|save|asm|inc|loop|if|else|return|break|enum|def|var|txt|static|type|table|inline|let|naked)\b</string>
 			<key>name</key>
 			<string>keyword.funk</string>
 		</dict>
@@ -179,7 +188,7 @@
 			<key>comment</key>
 			<string>8 bit register set</string>
 			<key>match</key>
-			<string>(?i)\b(a|b|c|d|e|h|l|i|r|xl|lx|xh|hx|ixl|ixh|yl|ly|yh|hy|iyl|iyh)\b</string>
+			<string>(?i)(?&lt;![\w\.])(a|b|c|d|e|f|h|l|i|r|xl|lx|xh|hx|ixl|ixh|yl|ly|yh|hy|iyl|iyh)(?![\w\.])</string>
 			<key>name</key>
 			<string>register.funk</string>
 		</dict>
@@ -188,7 +197,7 @@
 			<key>comment</key>
 			<string>16 bit register set</string>
 			<key>match</key>
-			<string>(?i)(\baf')|(\b(af|bc|de|hl|sp|ix|iy)\b)</string>
+			<string>(?i)(?&lt;![\w\.])(af|bc|de|hl|sp|ix|iy)(?![\w\.])</string>
 			<key>name</key>
 			<string>register.funk</string>
 		</dict>
