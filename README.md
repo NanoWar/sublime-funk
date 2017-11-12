@@ -17,6 +17,7 @@ Go to the `Tools > Build System` menu and select the `FunkAsm` item. Now you can
 You need to check out the spasm-funk (https://github.com/NanoWar/spasm-funk) submodule by typing:
 When you already pulled the sublime-funk repository:
 * git submodule update --init
+
 Or you initially clone sublime-funk recursively with:
 * git clone --recursive https://github.com/NanoWar/sublime-funk.git
 
